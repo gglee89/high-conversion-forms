@@ -1,15 +1,19 @@
-# high-conversion-forms
-Steps and guidelines on how to setup "High Conversion Forms"
+# Building High Conversion Web Forms
+Steps and guidelines on how to build "High Conversion Web Forms"
 
-## Udacity
+
+### General Info
+------
 #### This steps and guidelines are based on Udacity's course
-- Course name: Building High Conversion Web Forms
-- Course link: [Link](https://www.udacity.com/course/building-high-conversion-web-forms--ud890)
+- Name of the course: Building High Conversion Web Forms
+- Link to the course: [Link](https://www.udacity.com/course/building-high-conversion-web-forms--ud890)
+
 
 ### References:
 ------
 #### Luke Wroblewski (Product Director at Google)
 - Website: http://www.lukew.com/about/
+
 
 ### Steps:
 ------
@@ -66,7 +70,19 @@ Steps and guidelines on how to setup "High Conversion Forms"
 </label>
 ```
 
-**G. Autocomplete (Fill common fields like: Name, Address, Email, Phone number):**
+**G. Offer suggestions during input (with datalist)**
+- `Note: ` The datalist values are provided as suggestions. Users are not restricted to the suggestions provided.
+```html
+<label for="frmFavChocolate">Type of Chocolate</label>
+<input type="text" name="fav-choc" id="frmFavChocolate" list="chocType">
+	<datalist id="chocType">
+		<option value="white">
+		<option value="milk">
+		<option value="dark">
+	</datalist>
+```
+
+**H. Autocomplete (Fill common fields like: Name, Address, Email, Phone number):**
 - Reference: [https://developers.google.com/web/updates/2015/06/checkout-faster-with-autofill?hl=en](https://developers.google.com/web/updates/2015/06/checkout-faster-with-autofill?hl=en)
 ```html
 <div class="row">
@@ -89,19 +105,19 @@ Steps and guidelines on how to setup "High Conversion Forms"
 </div>
 ```
 
-**H. Autofocus:**
+**I. Autofocus:**
 - Desktop: Automatically move the autofocus to the form field. 
 	- (Potentially will prevent the backspace character from being used for navigation);
 	- Recommended when you want to save users time;
 	- Only focus on elements above the "fold";
 - Mobile: Ignore the autofucos attribute so that the keyboard doesn't randomly appear;
 
-**I. Use Past Data to Fill Inputs:**
+**J. Use Past Data to Fill Inputs:**
 - Using past daat to fillout the form.
 - Reusing information will make users using the application faster.
 - (`Note:` Filling to much information automatically might lead users to use wrong information).
 
-**J. Validation:**
+**K. Validation:**
 - Ensure that users know they are filling the form with the right information.
 - Give realtime feedback and minimizing errors.
 - (`Note:` Any front-end validation is not a replacement for the back-end validation).
@@ -164,11 +180,62 @@ Steps and guidelines on how to setup "High Conversion Forms"
 	- Implemented code using setCustomValidity() [Link to Codepen.io](https://codepen.io/gustavolee/pen/qqZYPJ)
 
 
-Importance of paying attention to small details
+Importance of paying attention to small details (~~Culture of delivery~~ Vs. **Culture of learning**)
 ---
->"...the most important thing is to be iterative and to be in a process of learning. The worst case scenario you can get to is what I call the sort of culture of delivery. Which is, your whole processes are aligned to one ship date, and we redesigned checkout. Okay, what's the next project? And we shipped that, that's done. All right, that's a culture of delivery. A culture of learning is, hey, we're going to try this. Oh, let's see what we can learn before we actually build it. Oh, we started to build it. Let's prototype it, and make it better and better. Hey, we launched it. What happened? Let's measure. We should tweak that. Let's keep measuring. Let's keep learning. When you do that then you find all of these opportunities for optimization, and for insights, that you wouldn't have....
+By **Luke Wroblewski (Product Director at Google)**
+>"...the most important thing is to be iterative and to be in a process of learning..." 
 
+- About the ~~Culture of Delivery~~:
+>"The worst case scenario you can get to is what I call the sort of **culture of delivery**. Which is, your whole processes are aligned to one ship date, and we redesigned checkout. Okay, what's the next project? And we shipped that, that's done. All right, that's a **culture of delivery**." 
+
+- About the **Culture of Learning**:
+>"A culture of learning is, hey, we're going to try this. Oh, let's see what we can learn before we actually build it. Oh, we started to build it. Let's prototype it, and make it better and better. Hey, we launched it. What happened? Let's measure. We should tweak that. Let's keep measuring. Let's keep learning." 
+
+`When you do that then you find all of these **opportunities for optimization, and for insights**, that you wouldn't have....`
+
+- Watch the entire interview on Youtube
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=906x9i2A8jM
 " target="_blank"><img src="http://img.youtube.com/vi/906x9i2A8jM/0.jpg" 
-alt="Interview with Luke W part 4" width="240" height="180" border="10" /></a>
+alt="Interview with Luke W part 4" width="100%" height="100%" border="10" /></a>
 
+
+### Form Principles
+---
+- Link: [Form Principles Desk - on Slideshare](http://www.slideshare.net/greenido/web-forms-the-right-way)
+	1. Make forms as short and sweet as possible.
+		- `Avoid` making any reduntant information and auto-fill as much as possible.
+	2. Provide helpful prompts.
+		- You can do it by providing Label elements.
+	3. Provide immediate feedback.
+		- Provide feedback on an input with an **instant validation**
+		- Implement a progress bar to provide feedback on the users' progress through the entire form.
+
+- Some questions brought up by users when filling up `long` forms:
+	- How long will this take?
+	- Is there a **save** button where I can save my progress? (i.e. Can I finish this form later?)
+	- Can I finish this form on a different device?
+
+
+### Methodology to enhance your forms EOU (Ease of use)
+---
+- **"Outside in view" methodology** Vs ~~Inside Out~~:
+	- **Outside in**
+		- Look at what your product looks like to people outside of oyur organization.
+	- ~~Inside out~~ (not recommended)
+		- Generally applied because of `legal requirements`, `tech team limitations`, or the `design team think it is not good`.
+- **Technique to force yourself to think outside in:**
+	- Have somebody to role play `the role of a form`.
+	- (i.e. Give some the form and **YOU** would act like a human, and the respondent can only respond with what the form says.)
+	- Example of an interaction in the above mention terms. `It doesn't make any sense in a normal conversation`:
+		- `(Human)` "Hi I'm Luke, and I'm trying to decide whether or not I will get a loan with you."
+		- `(Form)` "First name"
+		- `(Human)` "Ok, Luke"
+		- `(Form)` "Last name"
+		- `(Human)` "Hm, Wrobleski"
+		- `(Form)` "Gender"
+		- `(Human)` "Hmm, male"
+	- Example of an interaction in a **REAL** world situation: (*Very naturally weaved process*)
+		- `(Human)` "Hi I'm Luke, and I'm trying to decide whether or not I will get a loan with you."
+		- `(Form)` "Oh well, what are you trying to buy?"
+		- `(Human)` "Well, I'm trying to buy a home."
+		- `(Form)` "Ok, is this your first home?"
