@@ -42,8 +42,8 @@ d. Label Sizing and Positions:
 - Landscape viewports: Labels should be next to elements;
 - Portrait viewports: Labels should be above the elements;
 
-e. Add placeholders
-f. Calendar
+e. Add placeholders:
+f. Calendar:
 - E.g. Ordering plane tickets, movie tickets, doctor appointments, etc.
 - Use the browser's calendar widget
 ```
@@ -53,3 +53,83 @@ f. Calendar
 </label>	
 ```
 - [Calendar demo](http://codepen.io/greenido/pen/xwGEWO) 
+- [Calendar custom styling](https://www.tjvantoll.com/2013/04/15/list-of-pseudo-elements-to-style-form-controls/#input_date)
+- Use browser's date-pick:
+```
+<h3>Pick a date and time</h3>
+<label for="fc">
+    <span>Date and Time</span>
+    <input id="fc" type="datetime-local" name="cal">
+</label>
+```
+
+g. Autocomplete (Fill common fields like: Name, Address, Email, Phone number):
+- Reference: [https://developers.google.com/web/updates/2015/06/checkout-faster-with-autofill?hl=en](https://developers.google.com/web/updates/2015/06/checkout-faster-with-autofill?hl=en)
+```
+<div class="row">
+	<div class="input-field col-md-6">
+		<label for="first_name">First Name</label>
+		<input id="first_name" type="text" class="validate" required autocomplete="fname">
+	</div>
+
+	<div class="input-field col-md-6">
+       		<label for="frmEmailA">Email</label>
+        	<input id="frmEmailA" type="text" class="validate" required autocomplete="email">
+	</div>
+</div>
+
+<div class="row">
+	<div class="input-field col-md-6">
+		<label for="phone">Phone</label>
+		<input id="phone" name="phone" type="text" class="validate" required autocomplete="tel">
+	</div>
+</div>
+```
+
+h. Autofocus:
+- Desktop: Automatically move the autofocus to the form field. 
+	- (Potentially will prevent the backspace character from being used for navigation);
+	- Recommended when you want to save users time;
+	- Only focus on elements above the "fold";
+- Mobile: Ignore the autofucos attribute so that the keyboard doesn't randomly appear;
+
+i. Use Past Data to Fill Inputs:
+- Using past daat to fillout the form.
+- Reusing information will make users using the application faster.
+- (Warning: Filling to much information automatically might lead users to use wrong information).
+
+j. Validation:
+- Ensure that users know they are filling the form with the right information.
+- Give realtime feedback and minimizing errors.
+- (note: Any front-end validation is not a replacement for the back-end validation).
+- Numeric Inputs:
+	- Use HTML5 attributes such as: min, max and step.
+	- If a limitation in the possible values are needed, we should consider using input property range also with min, max, and step.
+	- Reference: [http://www.wufoo.com/html5/types/7-number.html?num=2107](http://www.wufoo.com/html5/types/7-number.html?num=2107)
+	- Example:
+```
+<form>
+	<table>
+		<tr>
+			<td><label for="quiz4">Quiz 4:</label></td>
+			<td><input type="number" id="quiz4" min="0" max="100" step="10" value="0" required></td>
+			<td>(needs min, max, and step)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Average: <output id="average">__</output></td>
+			<td><button id="calculate" type="button">Calculate</button></td>
+		</tr>
+		<tr>
+			<td><label for="grade">Grade:</label></td>
+			<td><input type="text" pattern="A|A\+||([B-D][+-]?)|F" id="grade" size="2" minlength="1" maxlength="2" required></td>
+			<td>(Extra credit: use "pattern" to check for A, A-, B, B+, B-, down to F.)</td>
+		</tr>
+		<tr>
+			<td></td>
+                	<td colspan=2><input type="submit"></td>
+        	</tr>
+	</table>
+</form>
+```
+	- Pattern explanation: Looks for an A or A+, OR look for a B or D with a "+" or "-" sign after it (if it needed it) OR just an F.
