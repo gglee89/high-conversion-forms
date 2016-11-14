@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { CheckoutComponent } from './checkout';
 
 @NgModule({
   declarations: [
-    AppComponent
-  ],
+    AppComponent,
+    CheckoutComponent
+],
   imports: [
     BrowserModule,
     FormsModule,
