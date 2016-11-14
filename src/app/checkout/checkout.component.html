@@ -5,104 +5,123 @@
 <section class="progress-bar">
   Seems like this could be a good place for a progress bar...ll
 </section>
+
 <section class="form">
-  <h3>Your Name and Demographic Information</h3>
-  <label for="frmAName">
-    <span>First Name</span>
-    <input id="frmAFirstName" name="first-name" type="text" required autocomplete="first-name">
-  </label>
-  <label for="frmALastName">
-    <span>Last Name</span>
-    <input id="frmALastName" name="last-name" type="text" required autocomplete="first-name">
-  </label>
-  <label for="frmEmail">
-    <span>Email Address</span>
-    <input id="frmEmail" name="email" type="text" required autocomplete="email">
-  </label>
+  <section class="demographic">
+    <h3>Your Name and Demographic Information</h3>
+    <label for="frmNameA">
+      <span>First Name</span>
+      <input id="frmNameA" name="fname" type="text" required autofocus autocomplete="name" placeholder="First name">
+    </label>
+    <label for="frmLastNameA">
+      <span>Last Name</span>
+      <input id="frmLastNameA" name="lname" type="text" required autocomplete="familiy-name" placeholder="Family name">
+    </label>
+    <label for="frmEmailA">
+      <span>Email Address</span>
+      <input id="frmEmailA" name="email" type="text" required autocomplete="email" placeholder="Email address">
+    </label>
+  </section>
 
-  <h3>Your Shipping Address</h3>
-  <label>First Name
-    <input type="text">
-  </label>
-  <label>Middle Initial
-    <input type="text">
-  </label>
-  <label>Last Name
-    <input type="text">
-  </label>
-  <label>Company
-    <input type="text">
-  </label>
-  <label>Address Line 1
-    <input type="text">
-  </label>
-  <label>Address Line 2
-    <input type="text">
-  </label>
-  <label>City
-    <input type="text">
-  </label>
-  <label>State/Province
-    <input type="text">
-  </label>
-  <label>Postal Code
-    <input type="text">
-  </label>
-  <label>Country
-    <input type="text">
-  </label>
+  <section class="shipping-address">
+    <h3>Your Shipping Address</h3>
+    <label for="frmNameB">
+      <span>First Name</span>
+      <input type="text" id="frmNameB" name="fname" autocomplete="name">
+    </label>
+    <label for="frmLastNameB">
+      <span>Last Name</span>
+      <input type="text" id="frmLastNameB" name="lname" autocomplete="family-name">
+    </label>
+    <label for="frmCompanyB">
+      <span>Company</span>
+      <input type="text" id="frmCompanyB" name="frmB-company">
+    </label>
+    <label for="frmAddressLine1">
+      <span>Address Line 1</span>
+      <input type="text" id="frmAddressLine1" name="address" autocomplete="address-line-1">
+    </label>
+    <label for="frmAddressLine2">
+      <span>Address Line 2</span>
+      <input type="text" id="frmAddressLine2" name="address" autocomplete="address-line-2">
+    </label>
+    <label for="frmCity">
+      <span>City</span>
+      <input type="text" id="frmCity" name="city" autocomplete="shipping locality" placeholder="New York">
+    </label>
+    <label for="frmState">
+      <span>State/Province</span>
+      <input type="text" id="frmState" name="state" autocomplete="shipping state" placeholder="NY">
+    </label>
+    <label for="frmPostal">
+      <span>Postal Code</span>
+      <input type="text" id="frmPostalCode" name="postal" autocomplete="postal-code" placeholder="PO BOX 40212">
+    </label>
+    <label for="frmCountry">
+      <span>Country</span>
+      <input type="country" id="frmCountry" name="country" autocomplete="country" placeholder="USA">
+    </label>
+  </section>
 
-  <h3>Your Credit Card Information</h3>
-  <div class="cc-warning"><em>Note: don't enter any actual credit card info!</em></div>
-  <label>Credit Card Number
-    <input type="text">
-  </label>
-  <label>Credit Card Type
-    <select name="cc">
-      <option>Visa</option>
-      <option>American Express</option>
-      <option>Mastercard</option>
-      <option>Discover</option>
-    </select>
-  </label>
-  <label>Expiration Date
-    <input type="text" placeholder="MM"><input type="text" placeholder="YY">
-  </label>
-  <label>CVV
-    <input type="number">
-  </label>
+  <section class="cc-info">
+    <h3>Your Credit Card Information</h3>
+    <div class="cc-warning"><em>Note: don't enter any actual credit card info!</em></div>
+    <label for="ccNumber">
+      <span>Credit Card Number</span>
+      <input id="ccNumber" name="cardnumber" type="text" required autocomplete="cc-number">
+    </label>
+    <label for="ccSelect">
+      <span>Credit Card Type</span>
+      <select id="ccSelect" name="card-type" required autocomplete="cc-type">
+        <option>Visa</option>
+        <option>American Express</option>
+        <option>Mastercard</option>
+        <option>Discover</option>
+      </select>
+    </label>
+    <label for="ccExpDate">
+      <span>Expiration Date</span>
+      <input id="ccExpDate" type="text" placeholder="MM-YYYY" name="exp-date" required autocomplete="cc-exp">
+    </label>
+    <label>CVC
+      <input id="ccCVC" type="number" name="cvc" required autocomplete="cc-csc">
+    </label>
+  </section>
 
-  <h3>Your Billing Address</h3>
-  <label>First Name
-    <input type="text">
-  </label>
-  <label>Middle Initial
-    <input type="text">
-  </label>
-  <label>Last Name
-    <input type="text">
-  </label>
-  <label>Company
-    <input type="text">
-  </label>
-  <label>Address Line 1
-    <input type="text">
-  </label>
-  <label>Address Line 2
-    <input type="text">
-  </label>
-  <label>City
-    <input type="text">
-  </label>
-  <label>State/Province
-    <input type="text">
-  </label>
-  <label>Postal Code
-    <input type="text">
-  </label>
-  <label>Country
-    <input type="text">
-  </label>
+  <section class="billing-address">
+    <h3>Your Billing Address</h3>
+    <label>First Name
+      <input type="text">
+    </label>
+    <label>Middle Initial
+      <input type="text">
+    </label>
+    <label>Last Name
+      <input type="text">
+    </label>
+    <label>Company
+      <input type="text">
+    </label>
+    <label>Address Line 1
+      <input type="text">
+    </label>
+    <label>Address Line 2
+      <input type="text">
+    </label>
+    <label>City
+      <input type="text">
+    </label>
+    <label>State/Province
+      <input type="text">
+    </label>
+    <label>Postal Code
+      <input type="text">
+    </label>
+    <label>Country
+      <input type="text">
+    </label>
+  </section>
+
 </section>
 
 <section class="order-review">
@@ -136,6 +155,7 @@
   </label>
   <input id="submit" type="submit">
 </section>
+
 <script>
   var submit = document.querySelector('#submit');
   submit.onclick = function () {
