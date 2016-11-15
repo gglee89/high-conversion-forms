@@ -1,164 +1,191 @@
 <header>
-  <span class="company-name">🂡 Cam's Company 🂡</span>
-  <span class="company-page">Checkout Page</span>
+  <div class="container">
+    <span class="company-name">🂡 Cam's Company 🂡</span>
+    <span class="company-page">Checkout Page</span>
+  </div>
 </header>
+
 <section class="progress-bar">
-  Seems like this could be a good place for a progress bar...ll
+  <div class="container">
+    <p>Seems like this could be a good place for a progress bar...ll</p>
+  </div>
 </section>
 
-<section class="form">
-  <section class="demographic">
-    <h3>Your Name and Demographic Information</h3>
-    <label for="frmNameA">
-      <span>First Name</span>
-      <input id="frmNameA" name="fname" type="text" required autofocus autocomplete="name" placeholder="First name">
+<form>
+  <section class="form">
+    <div class="row-fluid">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-12">
+            <section class="demographic">
+              <div class="container">
+                <h3>Your Name and Demographic Information</h3>      
+                <div class="form-group">
+                  <label class="control-label"  for="frmNameA">First Name</label>          
+                  <input id="frmNameA" class="form-control input-lg" name="fname" type="text" required autofocus autocomplete="name" placeholder="First name">
+                  <small id="firstNameHelp" class="form-text text-muted"></small>
+                </div>
+                <div class="form-group">
+                  <label class="control-label"  for="frmLastNameA">Last Name</label>
+                  <input id="frmLastNameA" class="form-control input-lg" name="lname" type="text" required autocomplete="familiy-name" placeholder="Family name">
+                  <small id="lastNamelHelp" class="form-text text-muted"></small>
+                </div>
+                <div class="form-group">
+                  <label class="control-label"  for="frmEmailA">Email Address</label>          
+                  <input id="frmEmailA" class="form-control input-lg" name="email" type="text" required autocomplete="email" placeholder="Email address">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+              </div><!-- end container -->
+            </section>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <section class="cc-info">
+              <div class="container">
+                <h3>Your Credit Card Information</h3>
+                <div class="cc-warning"><em>Note: don't enter any actual credit card info!</em></div>
+                <div class="form-group">
+                  <label class="control-label"  for="ccNumber">Credit Card Number</label>          
+                  <input id="ccNumber" class="form-control input-lg" name="cardnumber" type="text" required autocomplete="cc-number">
+                  <small id="ccNumberlHelp" class="form-text text-muted"></small>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="control-label"  for="ccSelect">Credit Card Type</label>          
+                      <select id="ccSelect" class="form-control input-lg" name="card-type" required autocomplete="cc-type">
+                        <option>Visa</option>
+                        <option>American Express</option>
+                        <option>Mastercard</option>
+                        <option>Discover</option>
+                      </select>
+                      <small id="ccSelectlHelp" class="form-text text-muted"></small>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group"> 
+                      <label class="control-label"  for="ccExpDate">Expiration Date</label>          
+                      <input id="ccExpDate" class="form-control input-lg" type="datetime" placeholder="MM-YYYY" name="exp-date" required autocomplete="cc-exp">
+                      <small id="ccExpDatelHelp" class="form-text text-muted"></small>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group"> 
+                      <label class="control-label" >CVC</label>
+                      <input id="ccCVC" class="form-control input-lg" type="number" name="cvc" required autocomplete="cc-csc">
+                      <small id="ccCVClHelp" class="form-text text-muted"></small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>        
+      </div>
+
+      <div class="col-md-6">
+        <section class="shipping-address">
+          <div class="container">
+            <h3>Your Shipping Address</h3>
+            <div class="form-group">
+              <label class="control-label"  for="frmNameB">First Name</label>          
+              <input type="text" class="form-control input-lg" id="frmNameB" name="fname" autocomplete="name" required>
+              <small id="firstNamelHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+              <label class="control-label"  for="frmLastNameB">Last Name</label>          
+              <input type="text" class="form-control input-lg" id="frmLastNameB" name="lname" autocomplete="family-name" required>
+              <small id="lastNamelHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+              <label class="control-label"  for="frmCompanyB">Company</label>          
+              <input type="text" class="form-control input-lg" id="frmCompanyB" name="frmB-company">          
+            </div>
+            <div class="form-group">
+              <label class="control-label"  for="frmAddressLine1">Address Line 1</label>          
+              <input type="text" class="form-control input-lg" id="frmAddressLine1" name="address" autocomplete="address-line-1">
+              <small id="AddressLine1lHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+              <label class="control-label"  for="frmAddressLine2">Address Line 2</label>          
+              <input type="text" class="form-control input-lg" id="frmAddressLine2" name="address" autocomplete="address-line-2">
+              <small id="AddressLine2lHelp" class="form-text text-muted"></small>        
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label"  for="frmCity">City</label>          
+                  <input type="text" class="form-control input-lg" id="frmCity" name="city" autocomplete="shipping locality" placeholder="New York">
+                  <small id="CitylHelp" class="form-text text-muted"></small>        
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label"  for="frmState">State/Province</label>          
+                  <input type="text" class="form-control input-lg" id="frmState" name="state" autocomplete="shipping state" placeholder="NY">
+                  <small id="StatelHelp" class="form-text text-muted"></small>        
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label"  for="frmPostal">Postal Code</label>          
+                  <input type="text" class="form-control input-lg" id="frmPostalCode" name="postal" autocomplete="postal-code" placeholder="PO BOX 40212">
+                  <small id="PostalCodelHelp" class="form-text text-muted"></small>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label"  for="frmCountry">Country</label>          
+                  <input type="country" class="form-control input-lg" id="frmCountry" name="country" autocomplete="country" placeholder="USA">
+                  <small id="CountrylHelp" class="form-text text-muted"></small>        
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>    
+
+    <label class="control-label"  class="check-correct">Is your order correct?
+        <input type="checkbox">
     </label>
-    <label for="frmLastNameA">
-      <span>Last Name</span>
-      <input id="frmLastNameA" name="lname" type="text" required autocomplete="familiy-name" placeholder="Family name">
-    </label>
-    <label for="frmEmailA">
-      <span>Email Address</span>
-      <input id="frmEmailA" name="email" type="text" required autocomplete="email" placeholder="Email address">
-    </label>
+    <input id="submit" type="submit">
+  </section> <!-- end form -->
+
+  <section class="order-review" style="background-color: aliceblue;">
+    <div class="container">
+      <h3>Your Order</h3>
+      <table class="table table-striped table-bordered">
+        <thead style="background-color: #f9f9f9;">
+          <tr class="headings">
+            <td>Product</td>
+            <td>Quantity</td>
+            <td>Price</td>
+            <td>Total</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Game Console 2015</td>
+            <td>1</td>
+            <td>$500.00</td>
+            <td>$500.00</td>
+          </tr>
+          <tr>
+            <td>Platformer Bros 3D</td>
+            <td>1</td>
+            <td>$50.00</td>
+            <td>$50.00</td>
+          </tr>
+          <tr class="total">
+            <td>Total</td>
+            <td>$550.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
-
-  <section class="shipping-address">
-    <h3>Your Shipping Address</h3>
-    <label for="frmNameB">
-      <span>First Name</span>
-      <input type="text" id="frmNameB" name="fname" autocomplete="name">
-    </label>
-    <label for="frmLastNameB">
-      <span>Last Name</span>
-      <input type="text" id="frmLastNameB" name="lname" autocomplete="family-name">
-    </label>
-    <label for="frmCompanyB">
-      <span>Company</span>
-      <input type="text" id="frmCompanyB" name="frmB-company">
-    </label>
-    <label for="frmAddressLine1">
-      <span>Address Line 1</span>
-      <input type="text" id="frmAddressLine1" name="address" autocomplete="address-line-1">
-    </label>
-    <label for="frmAddressLine2">
-      <span>Address Line 2</span>
-      <input type="text" id="frmAddressLine2" name="address" autocomplete="address-line-2">
-    </label>
-    <label for="frmCity">
-      <span>City</span>
-      <input type="text" id="frmCity" name="city" autocomplete="shipping locality" placeholder="New York">
-    </label>
-    <label for="frmState">
-      <span>State/Province</span>
-      <input type="text" id="frmState" name="state" autocomplete="shipping state" placeholder="NY">
-    </label>
-    <label for="frmPostal">
-      <span>Postal Code</span>
-      <input type="text" id="frmPostalCode" name="postal" autocomplete="postal-code" placeholder="PO BOX 40212">
-    </label>
-    <label for="frmCountry">
-      <span>Country</span>
-      <input type="country" id="frmCountry" name="country" autocomplete="country" placeholder="USA">
-    </label>
-  </section>
-
-  <section class="cc-info">
-    <h3>Your Credit Card Information</h3>
-    <div class="cc-warning"><em>Note: don't enter any actual credit card info!</em></div>
-    <label for="ccNumber">
-      <span>Credit Card Number</span>
-      <input id="ccNumber" name="cardnumber" type="text" required autocomplete="cc-number">
-    </label>
-    <label for="ccSelect">
-      <span>Credit Card Type</span>
-      <select id="ccSelect" name="card-type" required autocomplete="cc-type">
-        <option>Visa</option>
-        <option>American Express</option>
-        <option>Mastercard</option>
-        <option>Discover</option>
-      </select>
-    </label>
-    <label for="ccExpDate">
-      <span>Expiration Date</span>
-      <input id="ccExpDate" type="text" placeholder="MM-YYYY" name="exp-date" required autocomplete="cc-exp">
-    </label>
-    <label>CVC
-      <input id="ccCVC" type="number" name="cvc" required autocomplete="cc-csc">
-    </label>
-  </section>
-
-  <section class="billing-address">
-    <h3>Your Billing Address</h3>
-    <label>First Name
-      <input type="text">
-    </label>
-    <label>Middle Initial
-      <input type="text">
-    </label>
-    <label>Last Name
-      <input type="text">
-    </label>
-    <label>Company
-      <input type="text">
-    </label>
-    <label>Address Line 1
-      <input type="text">
-    </label>
-    <label>Address Line 2
-      <input type="text">
-    </label>
-    <label>City
-      <input type="text">
-    </label>
-    <label>State/Province
-      <input type="text">
-    </label>
-    <label>Postal Code
-      <input type="text">
-    </label>
-    <label>Country
-      <input type="text">
-    </label>
-  </section>
-
-</section>
-
-<section class="order-review">
-  <h3>Your Order</h3>
-  <table class="your-order">
-    <tr class="headings">
-      <td>Product</td>
-      <td>Quantity</td>
-      <td>Price</td>
-      <td>Total</td>
-    </tr>
-    <tr>
-      <td>Game Console 2015</td>
-      <td>1</td>
-      <td>$500.00</td>
-      <td>$500.00</td>
-    </tr>
-    <tr>
-      <td>Platformer Bros 3D</td>
-      <td>1</td>
-      <td>$50.00</td>
-      <td>$50.00</td>
-    </tr>
-    <tr class="total">
-      <td>Total</td>
-      <td>$550.00</td>
-    </tr>
-  </table>
-  <label class="check-correct">Is your order correct?
-    <input type="checkbox">
-  </label>
-  <input id="submit" type="submit">
-</section>
-
-<script>
-  var submit = document.querySelector('#submit');
-  submit.onclick = function () {
-    alert("All of your information was valid, right? I'll just go ahead and assume that it is ;)\n\nThanks for your submission!");
-  };
-</script>
+</form>
